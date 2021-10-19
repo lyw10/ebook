@@ -1,0 +1,24 @@
+$fontSize: 37.5;
+@function px2rem($px) {
+  @return ($px / $fontSize) + rem;
+}
+
+@mixin flex(){
+  display: flex;
+  align-items: center;
+}
+
+@mixin center() {
+  @include flex;
+  justify-content: center;
+}
+
+@mixin left() {
+  @include flex;
+  justify-content: flex-start;
+}
+
+@mixin right() {
+  @include flex;
+  justify-content: flex-end;
+}
